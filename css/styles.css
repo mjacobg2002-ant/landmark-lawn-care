@@ -252,7 +252,7 @@ section { position: relative; }
 .ba__after { }
 .ba__before-wrap { position: absolute; inset: 0; width: 100%; overflow: hidden; clip-path: inset(0 50% 0 0); }
 .ba__before-wrap .ba__img { width: 100%; height: 100%; }
-.ba__before { filter: saturate(.55) brightness(.82) contrast(.92); }
+.ba__before { }
 .ba__label { position: absolute; top: 18px; z-index: 3; font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase;
   background: rgba(20,23,15,.6); color: var(--ivory); padding: 7px 14px; border-radius: 100px; backdrop-filter: blur(6px); }
 .ba__label.before { left: 18px; } .ba__label.after { right: 18px; }
