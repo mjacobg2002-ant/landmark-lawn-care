@@ -1,4 +1,4 @@
-/* LandMark Lawn Care — homepage interactions */
+/* M León Landscaping LLC — homepage interactions */
 (function () {
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

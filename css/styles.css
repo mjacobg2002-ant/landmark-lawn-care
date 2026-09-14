@@ -1,10 +1,10 @@
 /* =========================================================================
-   LandMark Lawn Care — Homepage Concept
+   M León Landscaping LLC — Homepage
    Design system + all sections
    ========================================================================= */
 
 :root {
-  /* Brand palette — derived from the LandMark logo */
+  /* Brand palette — green, drawn from the M León lion logo */
   --forest:      #2f5e34;   /* deep brand green */
   --forest-deep: #22461f;
   --leaf:        #4e9b36;   /* mid brand green */
@@ -72,9 +72,14 @@ p { margin: 0; }
 .skip { position: absolute; left: -999px; top: 8px; z-index: 200; background: var(--ink); color: var(--ivory); padding: 10px 16px; border-radius: var(--radius); }
 .skip:focus { left: 8px; }
 
-/* ---------- logo ---------- */
-.logo-svg { display: block; height: 100%; width: auto; }
-.logo-svg text { font-family: var(--serif-times, "Tinos"), "Times New Roman", Georgia, serif; }
+/* ---------- logo / brand lockup ---------- */
+.brand { display: inline-flex; align-items: center; gap: 11px; height: 100%; }
+.brand__mark { height: 100%; width: auto; border-radius: 50%; flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,.35); }
+.brand__word { display: flex; flex-direction: column; line-height: 1; }
+.brand__word b { font-family: var(--serif); font-weight: 400; font-size: 24px; letter-spacing: .005em; }
+.brand__word small { font-size: 9.5px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase;
+  opacity: .82; margin-top: 3px; }
 
 /* ============================ BUTTONS ============================ */
 .btn {
@@ -109,8 +114,7 @@ p { margin: 0; }
   border-bottom: 1px solid transparent;
 }
 .nav a, .nav button { color: var(--ivory); }
-.nav__logo { height: 42px; display: block; flex-shrink: 0; }
-.nav__logo .logo-svg { height: 100%; }
+.nav__logo { height: 44px; display: flex; flex-shrink: 0; }
 .nav__links { display: flex; align-items: center; gap: 34px; list-style: none; margin: 0; padding: 0; }
 .nav__links a { font-size: 15px; font-weight: 600; letter-spacing: .01em; position: relative; opacity: .92; }
 .nav__links a::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 0; height: 1.5px; background: var(--lime); transition: width .3s var(--ease); }
@@ -128,7 +132,7 @@ p { margin: 0; }
   border-bottom-color: var(--line-dark);
   box-shadow: 0 12px 40px -24px rgba(0,0,0,.6);
 }
-.nav.is-solid .nav__logo { height: 38px; }
+.nav.is-solid .nav__logo { height: 40px; }
 
 /* burger */
 .burger { display: none; width: 46px; height: 46px; border: 1px solid var(--line-dark); border-radius: 50%;
@@ -282,7 +286,7 @@ section { position: relative; }
 .why__cell p { color: var(--sage); max-width: 34ch; }
 
 /* ============================ SEASONAL CARE ============================ */
-.season__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px,2.5vw,30px); margin-top: clamp(40px,6vw,64px); }
+.season__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px,2.5vw,30px); margin-top: clamp(40px,6vw,64px); }
 .season { border-top: 2px solid var(--forest); padding-top: 26px; position: relative; }
 .season::before { content: ""; position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--forest); }
 .season h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.4vw, 42px); color: var(--forest); margin-bottom: 6px; }
@@ -383,7 +387,7 @@ section { position: relative; }
 /* ============================ FOOTER ============================ */
 .footer { background: var(--ink); color: var(--ivory); padding-top: clamp(60px, 8vw, 100px); }
 .footer__top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 56px; border-bottom: 1px solid var(--line-dark); }
-.footer__brand .footer__logo { height: 56px; margin-bottom: 22px; }
+.footer__brand-lock { height: 52px; margin-bottom: 22px; }
 .footer__brand p { color: var(--sage); max-width: 34ch; font-size: 15px; }
 .footer__col h4 { font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--lime); margin-bottom: 20px; }
 .footer__col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
