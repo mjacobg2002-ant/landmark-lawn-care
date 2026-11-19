@@ -1,74 +1,39 @@
-# M León Landscaping LLC — Homepage
+# Lawn Care Company — demo homepage
 
-A homepage for **M León Landscaping LLC** (West Hartford, CT). Built on the
-premium single-page template originally created for LandMark Lawn Care, fully
-rebranded and re-content-ed for M León using the company's real Facebook photos
-and business details.
+A generic demo homepage for a **lawn care / landscaping company**, built by Kind Supply
+Digital to show prospects what their new site could look like.
 
-## Business details (from the M León Facebook page)
+This is a **concept site**: it uses the placeholder name "Lawn Care Company", stock
+photography, and placeholder service areas. It has no real phone number, email, address,
+logo, social links or reviews, and its estimate form sends and stores nothing.
 
-- **Name:** M León Landscaping LLC
-- **Owner:** Michel Sanchez
-- **Phone:** (860) 515-9334
-- **Location / service area:** West Hartford & Greater Hartford, CT
-- **Facebook:** https://www.facebook.com/profile.php?id=61558333536457
-- **Positioning:** Free estimates · weekly & bi-weekly service
-- **Services (7, per the profile logo):** Lawn Mowing · Yard Clean-Up ·
-  Bush Removal · Trim Bushes · Mulch · Fall Clean-Up · Snow Removal —
-  presented on the site as **6 grouped cards** (Bush Trimming & Removal combined,
-  Mulch shown as "Mulch & Bed Care").
+## What's on the page
+Hero · services strip · intro · 6 interactive services (lawn mowing, mulch & bed care,
+bush trimming & removal, yard clean-up, fall clean-up, snow removal) · before/after slider
+(sample stock pair) · "small details" band · why choose us · seasonal care · gallery ·
+local & personal · demo estimate form · final CTA · footer.
 
-## Run it
+## Demo rules
+- **noindex** everywhere: robots meta tag in `index.html`, `robots.txt`, and the
+  `X-Robots-Tag` header in `vercel.json`. Keep them.
+- Small **"Concept by Kind Supply Digital"** label (bottom-left) and footer note. Keep them.
+- **No real contact details.** No phone, email, address, `tel:` links or social links.
+- **Stock photos only** (`assets/img/`), never a prospect's photos or logo without permission.
+- **Form is a placeholder.** Fields have no `name` attributes and submitting only shows a
+  "this is a demo" message.
 
-No build step. Any static server works:
+## Personalizing for a prospect
+Search-and-replace "Lawn Care Company" with the prospect's name, swap in their real towns,
+and only add facts (phone, years, services) confirmed on their own website or Google listing.
 
-```bash
-cd landmark-lawn-care
-python3 -m http.server 8080
-# open http://localhost:8080
-```
-
-Or just open `index.html` in a browser.
-
-## Structure
+## Tech
+Static HTML + CSS + vanilla JS. No build step and no dependencies.
 
 ```
-index.html          # single-page homepage (all sections)
-css/styles.css       # design system + every section
-js/main.js           # nav, mobile menu, services swap, before/after, reveals, form
-assets/img/          # imagery
-assets/img/mleon/    # original full-size photos pulled from the Facebook page
+index.html       # single-page homepage
+css/styles.css   # design system + every section
+js/main.js       # nav, mobile menu, services swap, before/after, reveals, demo form
+assets/img/      # stock photography
 ```
 
-## Brand assets
-
-- **`assets/img/logo-lion.png`** — the M León lion emblem, extracted and cleanly
-  circle-masked from the company's own "Lawn Mowing Service" flyer. This is the
-  real brand mark, paired with an "M León / Landscaping LLC" wordmark lockup in the
-  nav and footer.
-- Palette is green (forest / leaf / lime accents) drawn from the logo and the
-  company's green branding.
-
-### Photography — all real M León work (pulled from Facebook)
-
-- `hero-lawn.jpg` — commercial mower on a large striped lawn (hero + gallery + final CTA)
-- `mow-action.jpg` — mowing a striped lawn (Lawn Mowing service)
-- `rockbed-after.jpg` — fresh decorative stone bed (Mulch & Bed Care + before/after "after")
-- `cleanup-before.jpg` — cleared/overgrown area (Yard Clean-Up + before/after "before")
-- `sod-install.jpg`, `lawn-stripes-1/2/3.jpg`, `mower-yellow.jpg` — striped lawns
-  and equipment used across services, intro, transform, local, and portfolio.
-
-## Notes / things to confirm before publishing
-
-- **Snow Removal** currently uses an equipment/lawn photo as a placeholder — no
-  winter photo was on the Facebook page. Swap for a real snow-removal photo when
-  available (see comment in the Services section).
-- **Email** — none listed on Facebook, so no email is shown on the site (the
-  estimate form still collects the customer's email).
-- **Estimate form** — front-end only; connect to a mail/CRM service to go live.
-- The original LandMark logo/photos and history remain in git history.
-
-## SEO
-
-Single `<h1>`, logical `<h2>` hierarchy, descriptive alt text, meta description
-covering all services, and LocalBusiness JSON-LD (West Hartford, CT).
+Local preview: `python -m http.server` in the repo root, then open http://localhost:8000.

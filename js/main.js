@@ -1,4 +1,4 @@
-/* M León Landscaping LLC — homepage interactions */
+/* Lawn Care Company demo (Kind Supply Digital concept) — homepage interactions */
 (function () {
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
